@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SocketViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
+    SocketViewController * aa=[SocketViewController new];
+    UINavigationController * uc=[[UINavigationController alloc]initWithRootViewController:aa];
+    self.window.rootViewController=uc;
+
     return YES;
 }
 
